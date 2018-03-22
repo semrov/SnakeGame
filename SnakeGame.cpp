@@ -1,4 +1,4 @@
-#include "widget.h"
+#include "SnakeGame.h"
 #include "ui_widget.h"
 
 SnakeGame::SnakeGame(QWidget *parent) :

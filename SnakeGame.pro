@@ -25,10 +25,10 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-        widget.cpp
+    SnakeGame.cpp
 
 HEADERS += \
-        widget.h
+    SnakeGame.h
 
 FORMS += \
         widget.ui
