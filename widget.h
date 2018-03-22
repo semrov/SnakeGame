@@ -7,13 +7,13 @@ namespace Ui {
 class Widget;
 }
 
-class Widget : public QWidget
+class SnakeGame : public QWidget
 {
     Q_OBJECT
 
 public:
-    explicit Widget(QWidget *parent = 0);
-    ~Widget();
+    explicit SnakeGame(QWidget *parent = 0);
+    ~SnakeGame();
 
 private:
     Ui::Widget *ui;

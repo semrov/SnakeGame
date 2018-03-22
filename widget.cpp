@@ -1,14 +1,14 @@
 #include "widget.h"
 #include "ui_widget.h"
 
-Widget::Widget(QWidget *parent) :
+SnakeGame::SnakeGame(QWidget *parent) :
     QWidget(parent),
     ui(new Ui::Widget)
 {
     ui->setupUi(this);
 }
 
-Widget::~Widget()
+SnakeGame::~SnakeGame()
 {
     delete ui;
 }
