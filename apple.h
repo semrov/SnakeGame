@@ -21,7 +21,7 @@ private:
 
 public:
     void generate_random_position();
-    Position get_position();
+    Position get_position() const;
     virtual void draw(QPainter&);
 
 };

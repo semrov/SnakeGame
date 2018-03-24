@@ -21,3 +21,17 @@ int Position::get_y()
 {
     return y;
 }
+
+void Position::set_x(int x)
+{
+    this->x = x;
+}
+
+void Position::set_y(int y)
+{
+    this->y = y;
+}
+bool Position::operator==(const Position &other)
+{
+    return this->x == other.x && this->y == other.y;
+}

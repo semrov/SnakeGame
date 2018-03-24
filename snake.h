@@ -2,6 +2,8 @@
 #define SNAKE_H
 #include "drawable.h"
 #include "position.h"
+#include "direction.h"
+#include "apple.h"
 #include <QImage>
 
 class Snake : public Drawable
@@ -18,7 +20,11 @@ private:
     QImage body;
 public:
     Snake(int board_width, int board_height, int dot_size);
+    bool move(Direction direction);
+    bool check_apple(const Apple &Apple);
     virtual void draw(QPainter &qp);
+private:
+    bool check_collission();
 };
 
 #endif // SNAKE_H

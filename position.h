@@ -10,6 +10,9 @@ public:
     Position();
     int get_x();
     int get_y();
+    void set_x(int x);
+    void set_y(int y);
+    virtual bool operator==(const Position &other);
 };
 
 #endif // POSITION_H

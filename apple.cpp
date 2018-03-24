@@ -22,7 +22,7 @@ void Apple::generate_random_position()
     this->p = Position(x,y);
 }
 
-Position Apple::get_position()
+Position Apple::get_position() const
 {
     return this->p;
 }
