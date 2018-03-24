@@ -1,10 +1,15 @@
+
+#ifndef APPLE_H
+#define APPLE_H
+
 #include <QImage>
 #include<QPainter>
 #include "drawable.h"
 #include "position.h"
+#include "snake.h"
 
-#ifndef APPLE_H
-#define APPLE_H
+class Snake;
+
 
 class Apple : public Drawable
 {
@@ -20,7 +25,7 @@ private:
     int size;
 
 public:
-    void generate_random_position();
+    void generate_random_position(Snake &snake);
     Position get_position() const;
     virtual void draw(QPainter&);
 

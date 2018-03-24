@@ -6,6 +6,7 @@
 #include "apple.h"
 #include <QImage>
 
+
 class Snake : public Drawable
 {
 private:
@@ -21,7 +22,8 @@ private:
 public:
     Snake(int board_width, int board_height, int dot_size);
     bool move(Direction direction);
-    bool check_apple(const Apple &Apple);
+    bool check_apple(const Apple &apple);
+    bool location_intersect_apple(int x, int y);
     virtual void draw(QPainter &qp);
 private:
     bool check_collission();

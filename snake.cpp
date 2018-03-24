@@ -50,6 +50,16 @@ bool Snake::check_apple(const Apple &apple)
     return apple.get_position() == snake[0];
 }
 
+bool Snake::location_intersect_apple(int x, int y)
+{
+    for(int i=0; i<snake.length(); i++)
+    {
+        if (snake[i].get_x() == x && snake[i].get_y() == y)
+            return true;
+    }
+    return false;
+}
+
 bool Snake::check_collission()
 {
     for(int i = snake.length(); i > 4; i--)
