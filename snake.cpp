@@ -45,9 +45,12 @@ bool Snake::move(Direction direction)
     return true;
 }
 
-bool Snake::check_apple(const Apple &apple)
+void Snake::check_apple(const Apple &apple)
 {
-    return apple.get_position() == snake[0];
+    if (apple.get_position() == snake[0])
+    {
+        snake.append(Position);
+    }
 }
 
 bool Snake::location_intersect_apple(int x, int y)
