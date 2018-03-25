@@ -20,9 +20,6 @@ void SnakeGame::timerEvent(QTimerEvent *event)
 {
     Q_UNUSED(event);
 
-    qDebug() << "Apple's position: " << apple.get_position() ;
-    qDebug() << "Snake's head position: " << snake.get_head_posotion() ;
-
     if(inGame)
     {
         if(snake.check_apple(apple))
@@ -63,22 +60,18 @@ void SnakeGame::keyPressEvent(QKeyEvent *event)
         case Qt::Key_Left:
             if(current_direction != Direction::Right)
                 current_direction = Direction::Left;
-            //qDebug() << "Left key was clicked!" ;
             break;
         case Qt::Key_Right:
             if(current_direction != Direction::Left)
                 current_direction = Direction::Right;
-            //qDebug() << "Right key was clicked!";
             break;
         case Qt::Key_Up:
             if(current_direction != Direction::Down)
                 current_direction = Direction::Up;
-            //qDebug() << "Up key was clicked!";
             break;
         case Qt::Key_Down:
             if(current_direction != Direction::Up)
                 current_direction = Direction::Down;
-            //qDebug() << "Down key was clicked!";
             break;
         default:
             break;
