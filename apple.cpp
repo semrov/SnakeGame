@@ -18,8 +18,8 @@ void Apple::generate_random_position(Snake &snake)
     int x,y;
     do
     {
-        x = qrand() % ((board_width-size) / size);
-        y = qrand() % ((board_height-size) / size);
+        x = (qrand() % ((board_width-size) / size)) * size;
+        y = qrand() % ((board_height-size) / size) * size;
     }
     while(snake.location_intersect_apple(x,y));
 

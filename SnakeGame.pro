@@ -27,8 +27,7 @@ SOURCES += \
         main.cpp \
     SnakeGame.cpp \
     apple.cpp \
-    snake.cpp \
-    position.cpp
+    snake.cpp
 
 HEADERS += \
     SnakeGame.h \

@@ -20,9 +20,13 @@ void SnakeGame::timerEvent(QTimerEvent *event)
 {
     Q_UNUSED(event);
 
+    qDebug() << "Apple's position: " << apple.get_position() ;
+    qDebug() << "Snake's head position: " << snake.get_head_posotion() ;
+
     if(inGame)
     {
-        snake.check_apple(apple);
+        if(snake.check_apple(apple))
+            apple.generate_random_position(snake);
         inGame = snake.move(current_direction);
         if(!inGame)
         {

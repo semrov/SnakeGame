@@ -45,12 +45,14 @@ bool Snake::move(Direction direction)
     return true;
 }
 
-void Snake::check_apple(const Apple &apple)
+bool Snake::check_apple(const Apple &apple)
 {
     if (apple.get_position() == snake[0])
     {
         snake.append(QPoint());
+        return true;
     }
+    return false;
 }
 
 bool Snake::location_intersect_apple(int x, int y)
@@ -65,16 +67,23 @@ bool Snake::location_intersect_apple(int x, int y)
 
 bool Snake::check_collission()
 {
-    for(int i = snake.length(); i > 4; i--)
+
+    for(int i = snake.length() - 1; i > 4; i--)
     {
         if(snake[0].x() == snake[i].x() && snake[0].y() == snake[i].y())
             return true;
     }
 
+
     if(snake[0].x() < 0 || snake[0].x() >= board_width)
         return true;
 
     return snake[0].y() < 0 || snake[0].y() >= board_height;
+}
+
+QPoint Snake::get_head_posotion()
+{
+    return snake[0];
 }
 
 void Snake::draw(QPainter &qp)

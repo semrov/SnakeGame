@@ -23,8 +23,9 @@ private:
 public:
     Snake(int board_width, int board_height, int dot_size);
     bool move(Direction direction);
-    void check_apple(const Apple &apple);
+    bool check_apple(const Apple &apple);
     bool location_intersect_apple(int x, int y);
+    QPoint get_head_posotion();
     virtual void draw(QPainter &qp);
 private:
     bool check_collission();
