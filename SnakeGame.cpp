@@ -1,5 +1,6 @@
 #include "SnakeGame.h"
 #include "ui_widget.h"
+#include <QPen>
 
 SnakeGame::SnakeGame(QWidget *parent) :
     QWidget(parent),
@@ -82,9 +83,12 @@ void SnakeGame::keyPressEvent(QKeyEvent *event)
 void SnakeGame::gameOver(QPainter &qp)
 {
     QString message = "Game over";
-    QFont font("Currier",20,QFont::DemiBold);
+    QFont font("Courier",20,QFont::DemiBold);
     QFontMetrics fm(font);
     int textWidth = fm.width(message);
+
+    QPen penText(QColor("#FF0000"));
+    qp.setPen(penText);
 
     qp.setFont(font);
     int h = height();
