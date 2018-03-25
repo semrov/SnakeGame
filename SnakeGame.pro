@@ -25,10 +25,20 @@ DEFINES += QT_DEPRECATED_WARNINGS
 
 SOURCES += \
         main.cpp \
-    SnakeGame.cpp
+    SnakeGame.cpp \
+    apple.cpp \
+    snake.cpp \
+    position.cpp
 
 HEADERS += \
-    SnakeGame.h
+    SnakeGame.h \
+    apple.h \
+    drawable.h \
+    snake.h \
+    direction.h
 
 FORMS += \
         widget.ui
+
+RESOURCES += \
+    imageresources.qrc
