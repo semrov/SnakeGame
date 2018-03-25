@@ -19,13 +19,6 @@ Snake::Snake(int board_width, int board_height, int dot_size) :
 
 bool Snake::move(Direction direction)
 {
-    if(check_collission()) return false;
-
-    for(int i = snake.length() - 1; i > 0; i--)
-    {
-        snake[i] = snake[i-1];
-    }
-
     switch(direction)
     {
         case Direction::Up:
@@ -40,6 +33,13 @@ bool Snake::move(Direction direction)
         case Direction::Right:
             snake[0].set_y(snake[0].get_y() + dot_size);
             break;
+    }
+
+    if(check_collission()) return false;
+
+    for(int i = snake.length() - 1; i > 0; i--)
+    {
+        snake[i] = snake[i-1];
     }
 
     return true;

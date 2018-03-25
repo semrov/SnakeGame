@@ -6,6 +6,7 @@
 #include "apple.h"
 #include <QImage>
 
+class Apple;
 
 class Snake : public Drawable
 {
