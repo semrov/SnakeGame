@@ -5,7 +5,7 @@
 Apple::Apple(int board_width,int board_height, int dot_size):
     board_width(board_width),
     board_height(board_height),
-    p(Position())
+    p(QPoint())
 {
     this->size = dot_size;
     this->image.load(":/images/images/apple.png");
@@ -23,16 +23,17 @@ void Apple::generate_random_position(Snake &snake)
     }
     while(snake.location_intersect_apple(x,y));
 
-    this->p = Position(x,y);
+    this->p.rx() = x;
+    this->p.ry() = y;
 }
 
-Position Apple::get_position() const
+QPoint Apple::get_position() const
 {
     return this->p;
 }
 
 void Apple::draw(QPainter &qp)
 {
-    qp.drawImage(p.get_x(),p.get_y(),image);
+    qp.drawImage(p.x(),p.y(),image);
 }
 

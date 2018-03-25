@@ -1,10 +1,10 @@
 #ifndef SNAKE_H
 #define SNAKE_H
 #include "drawable.h"
-#include "position.h"
 #include "direction.h"
 #include "apple.h"
 #include <QImage>
+#include <QPoint>
 
 class Apple;
 
@@ -17,7 +17,7 @@ private:
     // list of snake's position
     // snake[0] is the snake's head
     // snake[1..] is the snake's tail
-    QVector<Position> snake;
+    QVector<QPoint> snake;
     QImage head;
     QImage body;
 public:
