@@ -36,8 +36,7 @@ HEADERS += \
     snake.h \
     direction.h
 
-FORMS += \
-        widget.ui
+FORMS +=
 
 RESOURCES += \
     imageresources.qrc
